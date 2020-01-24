@@ -26,7 +26,7 @@ $psr4 = [
 ];
 ```
 
-Set up the email in `app/Config/Email`. I suggest you to use [mailtrap.io](https://mailtrap.io) for local development.
+Set up the email in `app/Config/Email`. Fill the `$fromEmail` and `$fromName` as well! I suggest you to use [mailtrap.io](https://mailtrap.io) for local development.
 
 Enable CSRF in `app/Config/Filters`.
 
