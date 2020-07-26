@@ -56,9 +56,11 @@ class UserModel extends Model
     /**
      * Changes validation rules dynamically
      */
-	public function setValidationRules(string $rules)
+	public function getRule(string $rules)
 	{
 		$this->validationRules = $this->dynamicRules[$rules];
+
+		return $this->validationRules;
 	}
 
     //--------------------------------------------------------------------
