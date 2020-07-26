@@ -59,7 +59,8 @@ class AccountController extends Controller
 	{
 		// update user, validation happens in model
 		$users = new UserModel();
-		$users->setValidationRules('updateAccount');
+		$getRule = $users->getRule('updateAccount');
+		$users->setValidationRules($getRule);
 		$user = [
 			'id'  	=> $this->session->get('userData.id'),
 			'name' 	=> $this->request->getPost('name')
@@ -95,7 +96,8 @@ class AccountController extends Controller
 		}
 
 		// update user with temporary new email, validation happens in model
-		$users->setValidationRules('changeEmail');
+		$getRule = $users->getRule('changeEmail');
+		$users->setValidationRules($getRule);
 		$updatedUser = [
 			'id'			=> $this->session->get('userData.id'),
 			'new_email'		=> $this->request->getPost('new_email'),
