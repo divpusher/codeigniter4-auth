@@ -43,6 +43,13 @@
 	      text-decoration: none;
 	      font-weight: bold;
 	    }
+
+	    .notification {
+	      padding: 10px;
+    	  background-color: #eee;
+    	  font-weight: bold;
+    	  margin-bottom: 30px;
+	    }
     </style>
 </head>
 <body>

@@ -27,7 +27,7 @@ class UserModel extends Model
 	protected $dynamicRules = [
 		'registration' => [
 			'name' 				=> 'required|alpha_space|min_length[2]',
-			'email' 			=> 'required|valid_email|is_unique[users.email,id,{id}]',
+			'email' 			=> 'required|valid_email|is_unique[users.email]',
 			'password'			=> 'required|min_length[5]',
 			'password_confirm'	=> 'matches[password]'
 		],
@@ -54,11 +54,11 @@ class UserModel extends Model
     //--------------------------------------------------------------------
 
     /**
-     * Changes validation rules dynamically
+     * Retrieves validation rule
      */
-	public function setValidationRules(string $rules)
+	public function getRule(string $rule)
 	{
-		$this->validationRules = $this->dynamicRules[$rules];
+		return $this->dynamicRules[$rule];
 	}
 
     //--------------------------------------------------------------------

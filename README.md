@@ -26,13 +26,17 @@ $psr4 = [
 ];
 ```
 
-Set up the email in `app/Config/Email`. Fill the `$fromEmail` and `$fromName` as well! I suggest you to use [mailtrap.io](https://mailtrap.io) for local development.
+Set up the email in `app/Config/Email`. **Fill the `$fromEmail` and `$fromName` as well!** I suggest you to use [mailtrap.io](https://mailtrap.io) for local development.
 
 Enable CSRF in `app/Config/Filters`.
 
 Make sure that your database is set in `.env` file or in `app/Config/Database.php`. Install the users table by running the following command in your project root:
 
-`php spark migrate -all`
+`php spark migrate`
 
 
 Visit `/register` on your local server to begin.
+
+## To-do list
+
+- use the new `is_not_unique` validation rule where possible

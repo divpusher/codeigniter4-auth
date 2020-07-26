@@ -83,11 +83,11 @@ class LoginController extends Controller
 		// login OK, save user data to session
 		$this->session->set('isLoggedIn', true);
 		$this->session->set('userData', [
-            'id' 			=> $user['id'],
-            'name' 			=> $user['name'],
-            'email' 		=> $user['email'],
-            'new_email' 	=> $user['new_email']
-        ]);
+		    'id' 			=> $user['id'],
+		    'name' 			=> $user['name'],
+		    'email' 		=> $user['email'],
+		    'new_email' 	=> $user['new_email']
+		]);
 
         return redirect()->to('account');
 	}
@@ -101,7 +101,7 @@ class LoginController extends Controller
 	{
 		$this->session->remove(['isLoggedIn', 'userData']);
 
-        return redirect()->to('login');
+		return redirect()->to('login');
 	}
 
 }
