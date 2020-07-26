@@ -57,7 +57,8 @@ class RegistrationController extends Controller
 
 		// save new user, validation happens in the model
 		$users = new UserModel();
-		$users->setValidationRules('registration');
+		$getRule = $users->getRule('registration');
+		$users->setValidationRules($getRule);
         $user = [
             'name'          	=> $this->request->getPost('name'),
             'email'         	=> $this->request->getPost('email'),
