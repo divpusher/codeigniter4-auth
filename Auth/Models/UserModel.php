@@ -26,17 +26,17 @@ class UserModel extends Model
 	// we need different rules for registration, account update, etc
 	protected $dynamicRules = [
 		'registration' => [
-			'name' 				=> 'required|alpha_space|min_length[2]',
+			'name' 				=> 'required|min_length[2]',
 			'email' 			=> 'required|valid_email|is_unique[users.email]',
 			'password'			=> 'required|min_length[5]',
 			'password_confirm'	=> 'matches[password]'
 		],
 		'updateAccount' => [
-			'id'	=> 'required|is_natural',
-			'name'	=> 'required|alpha_space|min_length[2]'
+			'id'	=> 'required|is_natural_no_zero',
+			'name'	=> 'required|min_length[2]'
 		],
 		'changeEmail' => [
-			'id'			=> 'required|is_natural',
+			'id'			=> 'required|is_natural_no_zero',
 			'new_email'		=> 'required|valid_email|is_unique[users.email]',
 			'activate_hash'	=> 'required'
 		]
