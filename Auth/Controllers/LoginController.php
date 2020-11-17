@@ -86,7 +86,8 @@ class LoginController extends Controller
 		    'id' 			=> $user['id'],
 		    'name' 			=> $user['name'],
 		    'email' 		=> $user['email'],
-		    'new_email' 	=> $user['new_email']
+		    'new_email' 	=> $user['new_email'],
+		    'user_group' 	=> $user['user_group']
 		]);
 
         return redirect()->to('account');

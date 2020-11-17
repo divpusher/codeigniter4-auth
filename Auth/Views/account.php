@@ -21,6 +21,10 @@
 		<input disabled type="text" value="<?= $userData['new_email']; ?>" />
 	</p>
 	<?php endif; ?>
+	<p>
+		<label><?= lang('Auth.userGroup') ?></label><br />
+		<input disabled type="text" value="<?= $userData['user_group']; ?>" />
+	</p>
     <p>
         <button type="submit"><?= lang('Auth.update') ?></button>
     </p>
