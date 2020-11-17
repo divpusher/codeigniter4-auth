@@ -8,7 +8,8 @@ return [
     'password'				=> 'Password',
     'passwordAgain'			=> 'Password again',
     'register'				=> 'Register',
-    'alreadyRegistered'		=> 'Already registered? Log in!',
+    'alreadyRegistered'     => 'Already registered? Log in!',
+    'userGroup'     => 'User Group',
 
     // Login/out
     'login'					    => 'Log in',

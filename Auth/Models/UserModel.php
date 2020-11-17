@@ -13,7 +13,7 @@ class UserModel extends Model
 	// this happens first, model removes all other fields from input data
 	protected $allowedFields = [
 		'name', 'email', 'new_email', 'password', 'password_confirm',
-		'activate_hash', 'reset_hash', 'reset_expires', 'active'
+		'activate_hash', 'reset_hash', 'reset_expires', 'active', 'user_group'
 	];
 
 	protected $useTimestamps = true;
